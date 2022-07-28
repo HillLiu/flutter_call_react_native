@@ -13,7 +13,7 @@ A new Flutter project.
    * A command-line tool help u add all folder files to xcode project.pbxproj.
    * https://www.npmjs.com/package/xcode-project-pbxproj
 
-## try it
+## Try it
 * install
 ```bash
 yarn
@@ -28,3 +28,6 @@ npx react-native start;
 ```bash
 flutter run;
 ```
+
+## Article
+* https://reactnative.dev/docs/integration-with-existing-apps
