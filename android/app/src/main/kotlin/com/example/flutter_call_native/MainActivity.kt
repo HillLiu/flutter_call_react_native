@@ -3,6 +3,7 @@ package com.example.flutter_call_native
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.*
+import android.content.Intent
 
 class MainActivity: FlutterActivity() {
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
@@ -15,14 +16,17 @@ class MainActivity: FlutterActivity() {
         // responsible to send the results of the call.
         MethodChannel(flutterEngine.dartExecutor, "methodChannelDemo")
                 .setMethodCallHandler { call, result ->
-                    val count: Int? = call.argument<Int>("count")
+                    val state: Int? = call.argument<Int>("state")
 
-                    if (count == null) {
-                        result.error("INVALID ARGUMENT", "Value of count cannot be null", null)
+                    if (state == null) {
+                        result.error("INVALID ARGUMENT", "Value of state cannot be null", null)
                     } else {
                         when (call.method) {
-                            "increment" -> result.success(count + 1)
-                            "decrement" -> result.success(count - 1)
+                            "goToReact" -> {
+                                val intent = Intent(this@MainActivity, RNModuleActivity::class.java)
+                                startActivity(intent)
+                                result.success(state)
+                            }
                             else -> result.notImplemented()
                         }
                     }
