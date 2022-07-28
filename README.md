@@ -1,4 +1,4 @@
-# flutter_call_react_native (Android && IOS supported)
+# flutter_call_react_native (Android & IOS supported)
 * Android (Kotlin)
 * IOS (Swift)
 
