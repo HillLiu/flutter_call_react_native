@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './counter_method_channel.dart';
+import './change_view.dart';
 
 /// The widget demonstrates how to use [MethodChannel] to invoke platform methods.
 /// It has two [ElevatedButton]s to increment and decrement the value of
@@ -28,13 +28,6 @@ class _MethodChannelDemoState extends State<MethodChannelDemo> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            'Value of count is $count',
-            style: Theme.of(context).textTheme.headline5,
-          ),
-          const SizedBox(
-            height: 16,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -43,8 +36,7 @@ class _MethodChannelDemoState extends State<MethodChannelDemo> {
               ElevatedButton.icon(
                 onPressed: () async {
                   try {
-                    final value = await Counter.increment(counterValue: count);
-                    setState(() => count = value);
+                    final value = await ChangeView.goToReact();
                   } catch (error) {
                     showErrorMessage(
                       context,
@@ -53,26 +45,8 @@ class _MethodChannelDemoState extends State<MethodChannelDemo> {
                   }
                 },
                 icon: const Icon(Icons.add),
-                label: const Text('Increment'),
+                label: const Text('Go To React'),
               ),
-
-              // Whenever users press the ElevatedButton, it invokes
-              // Counter.decrement method to decrement the value of count.
-              ElevatedButton.icon(
-                onPressed: () async {
-                  try {
-                    final value = await Counter.decrement(counterValue: count);
-                    setState(() => count = value);
-                  } catch (error) {
-                    showErrorMessage(
-                      context,
-                      (error as PlatformException).message!,
-                    );
-                  }
-                },
-                icon: const Icon(Icons.remove),
-                label: const Text('Decrement'),
-              )
             ],
           )
         ],
