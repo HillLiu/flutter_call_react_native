@@ -15,9 +15,16 @@ A new Flutter project.
 
 ## try it
 * install
-   * yarn
-   * cd ios; pod install
-* Run with flutter together.
 ```bash
+yarn
+cd ios; pod install
+```
 
+* Run react-native and flutter in different screen.
+```bash
+npx react-native start;
+```
+
+```bash
+flutter run;
 ```
