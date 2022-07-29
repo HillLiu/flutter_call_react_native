@@ -11,6 +11,10 @@
 ## Getting Started
 
 - check changes. https://github.com/HillLiu/flutter_call_react_native/pull/3/files
+- Android entrypoint
+   - https://github.com/HillLiu/flutter_call_react_native/blob/main/android/app/src/main/kotlin/com/example/flutter_call_native/MainActivity.kt
+- IOS entrypoint
+   - https://github.com/HillLiu/flutter_call_react_native/blob/main/ios/Runner/AppDelegate.swift
 
 ## Util
 
