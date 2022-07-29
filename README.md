@@ -2,6 +2,12 @@
 * Android (Kotlin)
 * IOS (Swift)
 
+| *Library* | *Version* | *Ref* |
+|-----------|-----------|-------|
+|Flutter|3.0.6|https://docs.flutter.dev/development/tools/sdk/releases?tab=macos|
+|React Native|0.69.3|https://www.npmjs.com/package/react-native|
+
+
 
 A new Flutter project.
 
