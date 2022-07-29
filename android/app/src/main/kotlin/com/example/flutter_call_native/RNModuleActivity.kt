@@ -1,4 +1,4 @@
-package com.example.flutter_call_native
+package com.example.flutter_call_react_native
 
 import android.app.Activity
 import android.os.Bundle

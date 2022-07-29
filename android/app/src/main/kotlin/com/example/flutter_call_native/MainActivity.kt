@@ -1,4 +1,4 @@
-package com.example.flutter_call_native
+package com.example.flutter_call_react_native
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
