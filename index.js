@@ -1,17 +1,11 @@
-import React from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React from "react";
+import { AppRegistry, StyleSheet, Text, View } from "react-native";
 
 const MyReactNativeApp = () => {
+  console.log({ HermesInternal: global.HermesInternal });
   return (
     <View style={styles.container}>
-      <Text style={styles.hello}>
-        Hello World 
-      </Text>
+      <Text style={styles.hello}>Hello World</Text>
     </View>
   );
 };
@@ -19,16 +13,16 @@ const MyReactNativeApp = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
   },
   hello: {
     fontSize: 20,
-    textAlign: 'center',
-    margin: 10
+    textAlign: "center",
+    margin: 10,
   },
 });
 
 // Module name
-AppRegistry.registerComponent('MyReactNativeApp', () => MyReactNativeApp);
+AppRegistry.registerComponent("MyReactNativeApp", () => MyReactNativeApp);
